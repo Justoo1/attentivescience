@@ -1,6 +1,6 @@
 ## ATTENTIVE SCIENCE WEBSITE
 
-![alt text](/assets/images/image.png)
+![alt text](public/assets/images/image.png)
 
 # Your Mission
 # Our Research
