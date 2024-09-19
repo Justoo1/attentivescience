@@ -10,7 +10,7 @@ const DynamicVideoComponent = dynamic(() => import('@/components/VideoComponent'
 
 const Article = ({article}: {article: articleProps}) => {
   return (
-    <div className=' relative flex flex-col gap-2 rounded-md bg-gray-50 shadow-md w-80 lg:w-[360px] lg:h-96 2xl:w-[488px] 2xl:h-[498px] flex-grow hover:shadow-lg hover:shadow-red-100 transition-all'>
+    <div className=' relative flex flex-col gap-2 rounded-md bg-gray-50 shadow-md w-80 lg:w-[310px] xl:w-[360px] lg:h-[27rem] xl:h-96 2xl:w-[488px] 2xl:h-[498px] flex-grow hover:shadow-lg hover:shadow-red-100 transition-all'>
         {
         article.videoUrl ? 
                 <DynamicVideoComponent url={article.videoUrl} forBlog={true}  />
@@ -28,7 +28,7 @@ const Article = ({article}: {article: articleProps}) => {
         </div>
         <div className="flex flex-col gap-2 p-3">
             <p className='p-medium-16 2xl:p-regular-20'>{article.title}</p>
-            <p className='p-medium-12 2xl:p-regular-16'>{article.description}</p>
+            <p className='p-medium-12 lg:p-regular-14 2xl:p-regular-16'>{article.description}</p>
             <div className="flex justify-between">
                 <p className='text-sm font-bold'>{calculateReadingTime(article.content)} mins read</p>
                 <p className='text-sm text-gray-800 font-bold'>{formatDateTime(article.createdAt).dateOnly}</p>

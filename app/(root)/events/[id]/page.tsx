@@ -20,14 +20,14 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
   return (
     <main className='flex flex-col w-full'>
         
-        <div style={{backgroundImage: `url(${event.imageUrl})`}} className="flex-center flex-grow bg-gray-50 h-52 lg:h-72 2xl:h-96 mb-3 bg-cover bg-center text-grey-500 px-10">
+        <div style={{backgroundImage: `url(${event.imageUrl})`}} className="flex-center flex-grow bg-gray-50 h-52 lg:h-72 2xl:h-96 mb-3 bg-cover bg-center text-grey-500 px-2 sm:px-10">
             <div className='absolute w-full max-h-72 lg:max-h-[23rem] 2xl:max-h-[29rem] bg-gray-900/60 inset-0 z-0'/>
-            <h1 className='h1-bold text-white z-10'>{event.title}</h1>
+            <h1 className='h3-medium sm:h1-bold text-white z-10'>{event.title}</h1>
         </div>
         
         <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
             <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 2xl:max-w-7xl">
-                <div className="p-6 md:p-16 2xl:col-span-3">
+                <div className="p-6 md:p-[2.5rem] xl:p-16 2xl:col-span-3">
                     {/* <p className="p-semibold-14">
                         {event.content}
                     </p> */}
@@ -75,7 +75,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                         </div>
                         </div>
                     </div>
-                    <hr className='border-gray-500 w-[30rem]'/>
+                    <hr className='border-gray-500  sm:w-[30rem]'/>
                     <div className="flex flex-col gap-2 md:w-[30rem]">
                         {/* <p className="p-bold-20 text-grey-600">LOCATION</p> */}
                         <div className="p-regular-20 flex items-center gap-3">
@@ -85,7 +85,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                         {/* <p className="p-medium-16 lg:p-regular-18">{event.LOC}</p>
                         <p className="p-medium-16 lg:p-regular-18 truncate text-primary-500 underline">{event.url}</p> */}
                     </div>
-                    <hr className='border-gray-500 w-[30rem]'/>
+                    <hr className='border-gray-500 sm:w-[30rem]'/>
                     <div className="flex flex-col gap-2 md:w-[30rem]">
                         {/* <p className="p-bold-20 text-grey-600">LOCATION</p> */}
                         <div className="p-regular-20 flex items-center gap-3">
@@ -112,7 +112,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
         </section>
 
         {/* EVENTS with the same category */}
-        <section className="wrapper my-8 flex flex-col gap-8 md:gap-12 md:px-16">
+        <section className="wrapper my-8 flex flex-col gap-8 md:gap-12 md:px-10 xl:px-16">
             <h2 className="h2-bold">Related Events</h2>
 
             <Collection 

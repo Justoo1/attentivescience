@@ -27,7 +27,7 @@ const EventPage = async ({ searchParams }: SearchParamProps) => {
   return (
     <>
     <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10 2xl:px-[3rem]">
-        <div className="event-wrapper grid grid-cols-1 gap-5 lg:grid-cols-2 2xl:gap-8 w-full lg:px-2">
+        <div className="event-wrapper grid grid-cols-1 gap-5 lg:grid-cols-2 2xl:gap-8 w-full lg:px-10 xl:px-16">
           <div className="flex flex-col justify-center gap-8 2xl:mr-32">
             <h1 className="h1-bold">Innovating Health Through Science & Discovery</h1>
             <p className="p-regular-20 md:p-regular-24">Pioneering Breakthroughs: Explore the Future of Pharmacy & Medicine. Shaping Tomorrow's Health Today.</p>
@@ -47,7 +47,7 @@ const EventPage = async ({ searchParams }: SearchParamProps) => {
           />
         </div>
     </section> 
-    <div className='px-16  2xl:flex'>
+    <div className='sm:px-3 md:px-16 lg:px-10 xl:px-16  2xl:flex'>
       <section id="events" className="event-wrapper my-8 flex flex-col gap-8 lg:gap-12 ">
         <h2 className="h2-bold">Where Science Meets <br />  Solutions for a Healthier World</h2>
 

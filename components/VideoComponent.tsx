@@ -13,7 +13,7 @@ export default function VideoComponent({ url, forBlog=false }: {url: string, for
                 forBlog ? 
                     <ReactPlayer url={url} muted={true} playing loop className=' rounded-t-md' width={490} height={240}/>
                  :
-                <ReactPlayer url={url} muted={true} playing loop className='lg:w-[38rem] 2xl:w-[45rem] 2xl:h-[29rem]' />
+                <ReactPlayer url={url} muted={true} playing loop className='lg:w-[28rem] xl:w-[38rem] 2xl:w-[45rem] 2xl:h-[29rem]' />
             }
         </div>
         

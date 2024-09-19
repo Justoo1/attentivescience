@@ -10,7 +10,7 @@ const UpcomingEvent = async () => {
   const hasEventFinished = new Date(event?.data[0]?.endDateTime) < new Date();
 
   return (
-    <section className="p-16 2xl:px-32 2xl:py-20">
+    <section className="p-16 lg:px-10 xl:px-16 2xl:px-32 2xl:py-20">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
             <div className="flex flex-col  gap-4">
                 <h3 className='h3-bold 2xl:text-5xl'>Events</h3>

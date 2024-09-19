@@ -85,7 +85,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col mt-3 p-16 2xl:px-[9rem]">
+      <section className="flex flex-col mt-3 p-16 lg:px-10 xl:px-16  2xl:px-[9rem]">
         <h3 className="h3-bold">Our Solutions</h3>
         {/* FROM LEFT TO RIGHT */}
         <div className="flex flex-col lg:flex-row mt-16 gap-4 2xl:gap-20">
@@ -152,27 +152,27 @@ export default async function Home() {
       <UpcomingEvent />
 
       {/* ONBOARDING */}
-      <section className="flex flex-col lg:flex-row p-16 2xl:px-32 gap-4 lg:gap-8 2xl:gap-20 bg-grey-600/5">
+      <section className="flex flex-col lg:flex-row p-16 lg:px-10 xl:px-16 2xl:px-32 gap-4 lg:gap-8 2xl:gap-20 bg-grey-600/5">
         <div className="flex flex-col justify-center items-center lg:gap-5 2xl:gap-8">
           <h3 className="h3-bold lg:text-5xl 2xl:text-8xl">Lets take you on a Digital Tour of our Amazing Facility</h3>
           <p className="p-regular-14 2xl:text-lg">Given the ongoing changes in our daily lives, we understand that physical visits may not always be possible. Instead, we invite you to join us virtually.</p>
         </div>
-        <div className="lg:w-[100rem] 2xl:w-[120rem]">
+        <div className="lg:w-[28rem] xl:w-[100rem] 2xl:w-[120rem]">
           <DynamicVideoComponent url="https://www.youtube.com/watch?v=y5X2fluLx3g" />
         </div>
       </section>
 
       {/* FEATURED ARTICLES */}
       <div className="flex flex-col gap-5 mt-16">
-        <h3 className="h3-bold text-center lg:text-left lg:ml-16 2xl:ml-32">Featured Articles</h3>
+        <h3 className="h3-bold text-center lg:text-left lg:ml-20 xl:ml-16 2xl:ml-32">Featured Articles</h3>
         <Blogs articles={blogs?.data} />
       </div>
       
 
       {/* MEET THE TEAM */}
-      <section className="flex flex-col p-16 2xl:px-32 justify-center items-center md:items-start gap-4 lg:gap-9 2xl:gap-12">
+      <section className="flex flex-col p-16 lg:px-10 xl:px-16 2xl:px-32 justify-center items-center md:items-start gap-4 lg:gap-9 2xl:gap-12">
         <h3 className="h3-bold">Meet Our Management Team</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 md:gap-10 2xl:gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-y-8 lg:gap-x-4 xl:gap-8 2xl:gap-20">
           {team.map((team) => {
             return (
                   <Team team={team} key={team.name} />

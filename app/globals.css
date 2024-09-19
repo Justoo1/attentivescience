@@ -104,7 +104,7 @@ body {
   }
 
   .event-wrapper {
-    @apply  mx-auto 2xl:mx-20 p-5 md:px-10 xl:px-0 w-full;
+    @apply  mx-auto 2xl:mx-20 p-5  md:px-10 lg:px-0 w-full;
   }
 
   .flex-center {

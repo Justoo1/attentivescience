@@ -25,7 +25,7 @@ const NavItems = () => {
 
 
   return (
-    <ul className="lg:flex-between flex w-full flex-col items-start gap-5 2xl:gap-[4.5rem] lg:flex-row bg-white">
+    <ul className="lg:flex-between flex w-full flex-col items-start gap-5 lg:gap-0 2xl:gap-[4.5rem] lg:flex-row bg-white">
       {headerLinks.map((link) => {
         const isActive = pathname === link.route;
         const isSolutions = link.label === 'Solutions'

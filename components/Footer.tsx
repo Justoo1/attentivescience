@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className='bg-footer-img bg-cover w-full flex flex-col gap-3'>
-      <div className="grid grid-cols-2 p-10 md:flex md:justify-between md:p-16 md:items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 px-16 sm:px-3 py-10 md:flex md:justify-between md:p-16 md:items-center">
         <div className="flex flex-col w-48 gap-4 justify-center items-start">
           <Image src="/assets/images/logo.svg" width={128} height={128} alt='logo' />
           <p className=' text-gray-500 p-regular-14'>We are on your team.

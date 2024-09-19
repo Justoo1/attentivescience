@@ -48,12 +48,12 @@ const BlogDetailPage = async ({ params: { id }, searchParams }: SearchParamProps
   const data = relatedBlogs?.data as IBlog[];
 
   return (
-    <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-8 p-12 2xl:px-28 bg-gray-50 '>
+    <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-8 md:p-12 2xl:px-28 bg-gray-50 '>
       {/* Main Blog Section */}
       <section className="flex col-span-2 flex-col gap-8 bg-white p-3 2xl:p-5 shadow-md rounded-sm">
         <h3 className='h3-bold'>{blog.title}</h3>
-        <div className="flex items-center gap-2">
-            <div className='flex gap-1 items-center justify-center'>
+        <div className="flex flex-col md:flex-row md:items-center gap-2">
+            <div className='flex gap-1 items-center md:justify-center'>
                 <div className="border-2 border-red-400 w-8 h-8 rounded-full">
                     <Image src="/assets/icons/logo.png" alt="author" width={30} height={30} className="rounded-full" />
                 </div>
@@ -85,7 +85,7 @@ const BlogDetailPage = async ({ params: { id }, searchParams }: SearchParamProps
       </section>
 
       {/* Related Blogs Section */}
-      <section className="flex flex-col gap-16">
+      <section className="flex flex-col items-center md:items-start gap-16">
         <div className="flex flex-col gap-4 bg-white p-3 shadow-md rounded-sm">
             <h5 className='h5-bold text-center'>Social Networks</h5>
             <div className="grid grid-cols-2 gap-2 mx-2">
@@ -100,7 +100,7 @@ const BlogDetailPage = async ({ params: { id }, searchParams }: SearchParamProps
             </div>
         </div>
         <h5 className='h5-bold text-center'>Related Blogs</h5>
-        <div className="grid grid-cols-1 gap-2 2xl:gap-5 mx-2">
+        <div className="grid grid-cols-1 gap-2 2xl:gap-5 xl:mx-2">
           {data.length > 0 ? (
             data.map((item, index) => <Article key={index} article={item} />)
           ) : (
