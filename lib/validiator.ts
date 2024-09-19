@@ -15,9 +15,10 @@ import { z } from "zod"
       .max(14, {
         message: "Phone must be less than 14 characters",
       })
-      .regex(/^\+?[1-9]\d{1,14}$/, {
+      .regex(/^(0\d{9,13}|\+?[1-9]\d{9,13})$/, {
         message: "Invalid phone number format",
       }),
+
       message: z.string().min(10, {
         message: "Message must be at least 10 characters",
       }).max(400, {
