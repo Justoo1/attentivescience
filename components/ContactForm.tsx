@@ -82,7 +82,7 @@ const ContactForm = () => {
             
             <FormField
                 control={form.control}
-                name="phone"
+                name="company"
                 render={({ field }) => (
                     <FormItem className="w-full">
                     <FormControl>
