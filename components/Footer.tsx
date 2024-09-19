@@ -24,9 +24,9 @@ const Footer = () => {
             <Link href='/safety/pharmacology' className='p-regular-14 text-primary-500 hover:underline'>
               Safety Pharmacology
             </Link>
-            <Link href='/contact' className='p-regular-14 text-gray-500'>
+            <p className='p-regular-14 text-gray-500'>
               AAALAC International Accredited
-            </Link>
+            </p>
           </div>
         </div>
 
@@ -37,12 +37,13 @@ const Footer = () => {
             17745 Metcalf Avenue, 
             Building #4, Stilwell, KS 66085 United States
             </p>
-            <p  className='p-regular-14 text-blue-500'>
+            <Link className='p-regular-14 text-blue-500' href="mailto:info@attentivescience .com">
               info@attentivescience .com
-            </p>
-            <p className='p-regular-14 text-gray-500'>
-              Phone : +1 (913) 308-0700
-            </p>
+            </Link>
+            <Link className='p-regular-14 text-blue-500' href="tel:+19133080700">
+              <span className='p-regular-14 text-gray-500'>Phone : </span>+1 (913) 308-0700
+            </Link>
+            
           </div>
         </div>
 
@@ -52,7 +53,7 @@ const Footer = () => {
             <p className='p-regular-14 text-gray-500'>
               Monday-Friday
             </p>
-            <p  className='p-regular-14 text-blue-500'>
+            <p  className='p-regular-14 text-primary-500'>
               8:00am - 6pm
             </p>
             <p></p>
