@@ -108,9 +108,27 @@ export function removeKeysFromQuery({ params, keysToRemove }: RemoveUrlQueryPara
 }
 
 export const handleError = (error: unknown) => {
-  console.error(error)
-  throw new Error(typeof error === 'string' ? error : JSON.stringify(error))
-}
+  console.error(error);
+ 
+
+  // Check if error is a string
+  if (typeof error === 'string') {
+    throw new Error(error);  // For string errors, throw a new error
+  } 
+  // Check if error is an Error instance
+  else if (error instanceof Error) {
+    throw error;  // Re-throw the existing error without wrapping it in another error
+  } 
+  // Handle all other unknown error types (e.g., objects, non-serializable errors)
+  else {
+    try {
+      throw new Error(JSON.stringify(error));  // Attempt to stringify unknown errors
+    } catch (stringifyError) {
+      throw new Error("An unknown error occurred and could not be serialized");
+    }
+  }
+};
+
 
 export const getMonthAndDay = (dateString: Date) => {
   const date = new Date(dateString);
