@@ -85,7 +85,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col mt-3 p-16 lg:px-10 xl:px-16  2xl:px-[9rem]">
+      <section className="flex flex-col mt-3 p-8 sm:p-16 lg:px-10 xl:px-16  2xl:px-[9rem]">
         <h3 className="h3-bold">Our Solutions</h3>
         {/* FROM LEFT TO RIGHT */}
         <div className="flex flex-col lg:flex-row mt-16 gap-4 2xl:gap-20">
@@ -132,21 +132,22 @@ export default async function Home() {
 
       {/* TESTIMONIAL */}
       <Carousel opts={{
-        align: "start",
-        loop: true,
-      }} className="md:mx-20">
-        <CarouselContent>
-          {testimonials.map((testimonial) => (
-            <CarouselItem className="" key={testimonial.name}>
-              <Testimonial  testimonial={testimonial} />
-            </CarouselItem>
-
-          ))}
+          align: "start",
+          loop: true,
           
-        </CarouselContent>
-        <CarouselPrevious className="hidden md:flex"/>
-        <CarouselNext className="hidden md:flex"/>
-      </Carousel>
+        }} className="md:mx-16">
+          <CarouselContent >
+            {testimonials.map((testimonial) => (
+              <CarouselItem  key={testimonial.name}>
+                <Testimonial  testimonial={testimonial} />
+              </CarouselItem>
+
+            ))}
+            
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex"/>
+          <CarouselNext className="hidden md:flex"/>
+        </Carousel>
 
       {/* UPCOMING EVENTS */}
       <UpcomingEvent />

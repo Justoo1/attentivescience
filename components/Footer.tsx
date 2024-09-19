@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
         <p className='text-sm text-gray-300'>© {getCurrentYear()} Attentive Science. All Rights Reserved.</p>
 
-        <Link href="/#" className='text-sm text-primary-500 hover:underline'>Term and Conditions | Privacy Policy</Link>
+        <Link href="/privacy/policy" className='text-sm text-primary-500 hover:underline'>Term and Conditions | Privacy Policy</Link>
       </div>
     </footer>
   )

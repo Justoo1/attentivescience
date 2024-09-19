@@ -186,7 +186,7 @@ export const headerLinks = [
   export const solutions = [
     {
       name: 'Pharmacokinetics',
-      route: '/pharmacokinetics'
+      route: '/pharmaco/kinetics'
     },
     {
       name: 'Toxicology',
@@ -318,3 +318,66 @@ export const headerLinks = [
       icon: '/assets/icons/instagram.svg',
     },
   ]
+
+export const policy = `# Privacy Policy  
+Effective Date: 22nd July, 2024  
+  
+
+**1. Introduction**.
+
+Attentive Science ("We," "Us," or "Our") is committed to protecting the privacy and security of the personal information we collect, use, and share. This Privacy Policy explains how we handle personal information in connection with our services as a contract research organization (CRO).  
+
+**2. Information We Collect**
+
+We may collect the following types of personal information:  
+Personal Identification Information: Name, email address, phone number, and job title.  
+Professional Information: Employment details, qualifications, and professional experience.  
+Research Data: Information related to preclinical studies, and other research activities, including study results.  
+Usage Data: Information about how you use our website and services, including IP addresses, browser type, and browsing history.
+
+**3. How We Use Your Information**.
+
+We use the collected information for various purposes, including:  
+To provide and manage our research services.  
+To communicate with you about our services, updates, and other information.  
+To comply with legal and regulatory requirements.  
+To improve our services and website functionality
+
+**4. Sharing Your Information**  
+
+We may share your personal information, after obtaining your permission with:  
+Research Partners: Collaborators and subcontractors who are bound by confidential disclosure agreements if they are involved in your research projects.  
+Regulatory Authorities: Government agencies and regulatory bodies as required by law.
+
+**5. Data Security**.
+
+We implement appropriate technical and organizational measures to protect personal information against unauthorized access, alteration, disclosure, or destruction. However, no data transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.  
+
+**6. Your Rights**  
+
+Depending on your location, you may have certain rights regarding your personal information, including:  
+The right to access, correct, or delete your personal information.  
+The right to object to or restrict the processing of your information.  
+The right to data portability.  
+The right to withdraw consent, where consent is the basis for processing.  
+To exercise these rights, please contact us at  [info@attentivescience.com](https://info@attentivescience.com/)
+
+**7. Cookies and Tracking Technologies**.
+
+We use cookies and similar tracking technologies to enhance your experience on our website. You can manage your cookie preferences through your browser settings.  
+
+**8. Changes to This Privacy Policy**  
+
+We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website and updating the effective date.
+
+**9. Contact Us**.
+
+If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:  
+Attentive Science, LLC  
+P O Box 417  
+Stilwell, KS 66085  
+[info@attentivescience.com](https://info@attentivescience.com/)  
++1 913 308 0700
+
+StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+`
