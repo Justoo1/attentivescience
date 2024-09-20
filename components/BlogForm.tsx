@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
+import dynamic from "next/dynamic";
 
 import { Input } from "@/components/ui/input"
 import { blogFormSchema } from "@/lib/validiator";
@@ -13,18 +14,23 @@ import { useState } from "react";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import { Checkbox } from "@/components/ui/checkbox"
-import MDEditor from "@uiw/react-md-editor";
 import { useUploadThing } from "@/lib/uploadthing";
 import { useRouter } from "next/navigation";
 import { FileUploader } from "./FileUploader";
 import Dropdwon from "./Dropdwon";
-import Link from "next/link";
 import { IBlog } from "@/lib/database/models/blog.model";
 import { createBlog, updateBlog } from "@/lib/actions/blog.actions";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
 
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
+
+const MDEditor = dynamic(
+    () => import("@uiw/react-md-editor"),
+    { ssr: false }
+  );
 
 
 type BlogFormProps = {
@@ -36,7 +42,6 @@ type BlogFormProps = {
 
 const BlogForm = ({createdBy, type, blog, blogId }: BlogFormProps) => {
     const [ files, setFiles ] = useState<File[]>([]);
-    const [startDate, setStartDate] = useState(new Date());
     const initialValues = blog && type === 'Update' ? {...blog, createdAt: new Date(blog.createdAt), categoryId:blog.category._id} : blogDefaultValues
     const { startUpload } = useUploadThing('imageUploader')
     const router = useRouter();

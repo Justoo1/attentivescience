@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import removeImports from 'next-remove-imports';
 const nextConfig = {
     images: {
         remotePatterns: [
@@ -19,4 +20,5 @@ const withBundleAnalyzer = (await import("@next/bundle-analyzer")).default({
   enabled: process.env.ANALYZE === "true",
 });
 
-export default withBundleAnalyzer(nextConfig);
+const config = removeImports(nextConfig);
+export default withBundleAnalyzer(config);

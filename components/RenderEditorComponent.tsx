@@ -2,7 +2,6 @@
 
 import MDEditor from '@uiw/react-md-editor'
 import React, { useEffect, useState } from 'react'
-import "@uiw/react-md-editor/markdown-editor.css";
 
 const RenderEditorComponent = ({ content, bgColor  }: { content: string, bgColor: string }) => {
     const [fontSize, setFontSize] = useState('1rem');

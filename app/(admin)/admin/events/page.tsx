@@ -9,6 +9,9 @@ import { getAllEventsAdmin } from '@/lib/actions/event.actions';
 import { IEvent } from '@/lib/database/models/event.model';
 import { formatDateTime } from '@/lib/utils';
 import { DeleteConfirmation } from '@/components/DeleteConfirmation';
+import dynamic from 'next/dynamic';
+
+const DynamicEventForm = dynamic(() => import('@/components/EventForm'), { ssr: false })
 
 const EventDashboard = ({ searchParams }: SearchParamProps) => {
   const [ createEvent, setCreateEvent ] = useState(false)
@@ -63,11 +66,11 @@ const EventDashboard = ({ searchParams }: SearchParamProps) => {
           )}
         </section>
         {createEvent && <div className='py-16 px-32 lg:px-48 2xl:px-52'>
-            <EventForm type='Create' createdBy='Jay' />
+            <DynamicEventForm type='Create' createdBy='Jay' />
           </div>}
 
         {updateEvent && <div className='py-16 px-32 lg:px-48 2xl:px-52'>
-            <EventForm type='Update' event={selectedEvent} eventId={selectedEvent._id} createdBy='Jay' />
+            <DynamicEventForm type='Update' event={selectedEvent} eventId={selectedEvent._id} createdBy='Jay' />
           </div>}
 
         <section className="wrapper overflow-x-auto lg:mx-auto 2xl:justify-center 2xl:items-center 2xl:flex-center">

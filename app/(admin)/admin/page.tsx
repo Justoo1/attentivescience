@@ -6,8 +6,8 @@ import { SearchParamProps } from '@/types'
 import React, { useEffect, useState } from 'react'
 import { DeleteConfirmation } from '@/components/DeleteConfirmation';
 import { getAllBlogAdmin } from '@/lib/actions/blog.actions';
-import BlogForm from '@/components/BlogForm';
 import { formatDateTime } from '@/lib/utils';
+import dynamic from 'next/dynamic';
 
 const AdminDashboard = ({ searchParams }: SearchParamProps) => {
   const blogId = (searchParams?.eventId as string) || ''
@@ -21,6 +21,7 @@ const AdminDashboard = ({ searchParams }: SearchParamProps) => {
   const [ blogs, setBlogs ] = useState([] as any[])
   const category = (searchParams?.category as string) || '';
 
+  const BlogForm = dynamic(() => import('@/components/BlogForm'), { ssr: false })
 
   useEffect(() => {
     const fetchEvents = async () => {

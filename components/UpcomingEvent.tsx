@@ -3,6 +3,7 @@ import { Button } from './ui/button'
 import { getAllEvents } from '@/lib/actions/event.actions'
 import Link from 'next/link'
 import RenderEditorComponent from './RenderEditorComponent'
+import MarkdownPreview from './MarkdownPreview'
 
 const UpcomingEvent = async () => {
   const event = await getAllEvents({query: '', limit: 1, page: 1, category: '' })
@@ -18,7 +19,7 @@ const UpcomingEvent = async () => {
             </div>
             <div className="flex flex-col gap-3 lg:w-[35rem] 2xl:w-[60rem]">
                 <p className='p-semibold-20 2xl:p-bold-30'>{event?.data[0]?.title}</p>
-                <RenderEditorComponent content={event?.data[0]?.description} bgColor="#fff" />
+                <MarkdownPreview content={event?.data[0]?.description} />
 
                 <div className="flex gap-14 items-center">
                   <Button asChild size="lg" className=' bg-primary-500 hover:bg-red-600 text-white w-32 text-sm transition-all'>

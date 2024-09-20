@@ -14,7 +14,6 @@ import { useState } from "react";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import { Checkbox } from "@/components/ui/checkbox"
-import MDEditor from "@uiw/react-md-editor";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { useUploadThing } from "@/lib/uploadthing";
@@ -23,6 +22,14 @@ import { createEvent, updateEvent } from "@/lib/actions/event.actions";
 import { IEvent } from "@/lib/database/models/event.model";
 import { FileUploader } from "./FileUploader";
 import Dropdwon from "./Dropdwon";
+import dynamic from "next/dynamic";
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
+
+const MDEditor = dynamic(
+    () => import("@uiw/react-md-editor"),
+    { ssr: false }
+  );
 
 type EventFormProps = {
     createdBy: string
@@ -156,7 +163,7 @@ const EventForm = ({createdBy, type, event, eventId }: EventFormProps) => {
                 name="content"
                 render={({ field }) => (
                     <FormItem className="w-full">
-                    <FormControl className="h-72">
+                    <FormControl className="h-72" data-color-mode="light">
                         <MDEditor {...field} value={field.value} onChange={(val) => field.onChange(val || "")} />
                     </FormControl>
                     <FormMessage />

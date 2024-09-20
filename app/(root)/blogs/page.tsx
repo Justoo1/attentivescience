@@ -1,11 +1,13 @@
-import Blogs from '@/components/Blogs'
-import CategoryFilter from '@/components/CategoryFilter'
-import Search from '@/components/Search'
 import { Button } from '@/components/ui/button'
 import { getAllBlog } from '@/lib/actions/blog.actions'
 import { SearchParamProps } from '@/types'
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
+
+const Blogs = dynamic(() => import('@/components/Blogs'), {ssr: false});
+const CategoryFilter = dynamic(() => import('@/components/CategoryFilter'), {ssr: false});
+const Search = dynamic(() => import('@/components/Search'), {ssr: false});
 
 export const metadata: Metadata = {
   title: "Blogs",
@@ -19,7 +21,15 @@ export async function generateStaticParams() {
     page: 1,
     limit: 6
   });
-  return blogs?.data.map(({ _id }: { _id: string }) => ({ id: _id }));
+  if (blogs?.data) {
+    return blogs.data.map((blog: any) => ({
+      params: {
+        id: blog._id,
+      },
+    }));
+  }
+
+  return [];
 }
 
 const BlogPage = async ({ searchParams }: SearchParamProps) => {
