@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Button } from './ui/button'
 import { getAllEvents } from '@/lib/actions/event.actions'
 import Link from 'next/link'
-import RenderEditorComponent from './RenderEditorComponent'
 import MarkdownPreview from './MarkdownPreview'
 
 const UpcomingEvent = async () => {
