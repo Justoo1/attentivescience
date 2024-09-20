@@ -1,9 +1,6 @@
 import { calculateReadingTime, formatDateTime } from '@/lib/utils'
 import { articleProps } from '@/types'
-import ReactPlayer from 'react-player/youtube'
-import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import dynamic from 'next/dynamic'
 
 const DynamicVideoComponent = dynamic(() => import('@/components/VideoComponent'), { ssr: false })

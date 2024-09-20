@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="h-screen w-full relative bg-cover bg-no-repeat z-0" >
       {/* style={{ backgroundImage: 'url("https://utfs.io/f/8ov4qkHb6SqJZnmfQHX7x8OralnuFPjtGTYcdC2fh1VQJ5Nm")' }} */}
-        <Image src="https://utfs.io/f/8ov4qkHb6SqJZnmfQHX7x8OralnuFPjtGTYcdC2fh1VQJ5Nm" alt="hero" width={1920} height={1080} className="w-full h-full object-cover absolute inset-0 z-0" />
+        <Image quality={75} loading='lazy' src="https://utfs.io/f/8ov4qkHb6SqJZnmfQHX7x8OralnuFPjtGTYcdC2fh1VQJ5Nm" alt="hero" width={1920} height={1080} className="w-full h-full object-cover absolute inset-0 z-0" />
         <div className="absolute inset-0 z-1 bg-black opacity-60"></div> {/* Optional overlay */}
         <div className="flex items-start justify-center gap-10 flex-col mx-11 2xl:mx-[8rem] h-full">
             <div className="text-start text-white z-10">
@@ -18,7 +18,7 @@ const Hero = () => {
 
             <Button className=' bg-primary-500 z-10 hover:bg-red-700 ' asChild>
               <Link href="/contact" className='flex gap-2 px-8 py-2'>
-                Contact Us <Image src="/assets/icons/arrow-left.svg" alt="arrow" width={10} height={10} />
+                Contact Us <Image loading='lazy' src="/assets/icons/arrow-left.svg" alt="arrow" width={10} height={10} />
               </Link>
             </Button>
       </div>

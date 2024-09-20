@@ -10,7 +10,13 @@ const nextConfig = {
           },
         ],
     },
+    experimental: {
+      optimizePackageImports: ['@uiw/react-md-editor'],
+    },
 };
 
+const withBundleAnalyzer = (await import("@next/bundle-analyzer")).default({
+  enabled: process.env.ANALYZE === "true",
+});
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

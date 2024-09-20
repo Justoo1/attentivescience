@@ -320,12 +320,13 @@ export const headerLinks = [
   ]
 
 export const policy = `# Privacy Policy  
-Effective Date: 22nd July, 2024  
+Effective Date: 22nd July, 2024 
   
 
 **1. Introduction**.
 
-Attentive Science ("We," "Us," or "Our") is committed to protecting the privacy and security of the personal information we collect, use, and share. This Privacy Policy explains how we handle personal information in connection with our services as a contract research organization (CRO).  
+Attentive Science ("We," "Us," or "Our") is committed to protecting the privacy and security of the personal information we collect, use, and share. This Privacy Policy explains how we handle personal information in connection with our services as a contract research organization (CRO).
+
 
 **2. Information We Collect**
 
